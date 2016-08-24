@@ -1,7 +1,43 @@
-.logo{
-    float: left;
-    padding: 1px 0px;
+*{margin:0;padding:0;text-decoration: none;}
+.banner{
+	margin: 0 auto;
+	width: 100%;
+    font-family: "Microsoft YaHei UI", sans-serif;
 }
-.menu{
-    float: right;
+.header{
+	position: relative;
+	text-align: center;
+	height: 70px;
+	margin: 0 auto;
+	min-width: 600px;
+	max-width: 1140px;
+	font-size: 18px;
+	background-color: #FFFFFF;
 }
+#logo{position: absolute;float: left;padding: 13px 0;}
+#menu{float: right;}
+#menu ul li{float:left;list-style:none;}
+#menu ul li a{color: #666;float: left;display: block;padding: 21px;text-align:center;}
+#menu ul li:hover a{color: #ffffff;background-color: #5094F2;font-weight:bold;}
+.active{border-bottom: 2px solid #5094F2;}
+.contain{background-color: #e6e6e6;}
+#container{min-width: 600px;  max-width: 1140px;position:relative;overflow:hidden;margin:0 auto;height:500px;}
+#list{position:absolute;width:5700px;z-index:1;}
+#list img{float:left;}
+#buttons{position:absolute;bottom:20px;left:50%;margin:0 0 0 -60px;z-index:2;}
+#buttons span{cursor:pointer;height:15px;width:15px;border-radius:50%;background:#999;margin:0 10px;float:left;border: 3px solid #ffffff;}
+#buttons .on{background: #5094F2;}
+.arrow{cursor:pointer;z-index:2;line-height:40px;text-align:center;font-size:36px;font-weight:bold;width:40px;height:40px;position:absolute;top:230px;background-color: RGBA(0,0,0,0.3);color: #ffffff;display:none;}
+#container a:hover{ RGBA(0,0,0,0.7);}
+#container:hover .arrow{display:block;}
+#prev{left:10px;}
+#next{right:10px;}
+.contain_btn{background:RGBA(50,125,255,0.3);border: 1px solid #ffffff;position: absolute;z-index: 2;left:20%;bottom:150px;}
+.contain_btn a{color: #ffffff;font-size: 18px;margin:10px;font-weight:bold;}
+.contain_btn:hover{background:RGBA(50,125,255,0.7);/*FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#b8c4cb,endColorStr=red); /!*IE 6 7 8*!/
+background: -ms-linear-gradient(top, #fff,  #5094F2);        /!* IE 10 *!/
+background:-moz-linear-gradient(top,#b8c4cb,#f6f6f8);/!*火狐*!/
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#f6f6f8));/!*谷歌*!/
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#5094F2));      /!* Safari 4-5, Chrome 1-9*!/
+background: -webkit-linear-gradient(top, #fff, #5094F2);   /!*Safari5.1 Chrome 10+*!/
+background: -o-linear-gradient(top, #fff, #5094F2);  /!*Opera 11.10+*!/*/}

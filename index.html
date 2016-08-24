@@ -1,26 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>HOME</title>
     <script src="js/jquery-3.1.0.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<script src="js/myfirst.js"></script>
 </head>
 <body>
 <div class="banner">
     <div class="header">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="" /> </a>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html"> Home</a></li>
-                <li><a href="products.html"> Products</a></li>
-                <li><a href="services.html"> Services</a></li>
-                <li><a href="contacts.html"> Contact</a></li>
-            </ul>
-        </div>
+			<div id="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" /> </a>
+			</div>
+			<div id="menu">
+				<ul>
+					<li  class="active"><a href="index.html"> Home</a></li>
+					<li><a href="#"> Products</a></li>
+					<li><a href="#"> Services</a></li>
+					<li><a href="#"> Contact</a></li>
+				</ul>
+		</div>
     </div>
-    <div class="container"></div>
+	<div class="contain">
+    <div id="container">
+		<div id="list">
+        <img src="images/img3.jpg" alt="" />
+        <img src="images/img1.jpg" alt="" />
+        <img src="images/img2.jpg" alt="" />
+        <img src="images/img3.jpg" alt="" />
+        <img src="images/img1.jpg" alt="" />
+    	</div>
+    	<div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+    	</div>
+    	<a href="javascript:;" class="arrow" id="prev">&lt;</a>
+    	<a href="javascript:;" class="arrow" id="next">&gt;</a>
+		<div class="contain_btn"><a href="#">Know More About.</a> </div>
+	</div>
+	</div>
 </div>
 <div class="contrary"></div>
 <div class="content"></div>
