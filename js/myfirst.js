@@ -3,78 +3,51 @@
  */
 /*
 window.onload=function(){
-    /!*==============menu===============*!/
-    var menu=document.getElementById("menu");
-    var uL=menu.getElementsByTagName("ul")[0];
-    var oL=menu.getElementsByTagName("li");
-
-    for(var i=0;i<oL.length;i++){
-        oL[i].onmouseover=function(){
-            if(oL[i].className==""){
-                oL[i].className="active";
-            }
-            else return;
-        }
-
-    }
-/!*    function showMenu(){
-        for(var i=0;i<oL.length;i++){
-            if(oL[i].className=="active"){
-                oL[i].className="";
-            }
-        }
-        this.className="active";
-    }
-    for(i=0;i<oL.length;i++){
-
-        oL[i].onmouseover=function(){
-            showMenu();
-        }
-    }*!/
-	};*/
-/*
-$(function(){
-    var sub_active=$(".active");
-    var sub_scroll=function(target){
-        sub_active.removeClass("active");
-        target.parent().addClass("active");
-        sub_active=target.parent();
-    };
-    $("#menu a").click(function(){
-        sub_scroll($(this));
-        var target = $(this).attr("href");
-        var targetScroll = $(target).offset().top - 80;
-        $("html,body").animate({scrollTop:targetScroll},300);
-        return false;
-    });
-}());*/
-window.onload=function(){
     var container=document.getElementById("container");
     var list=document.getElementById("list");
     var buttons=document.getElementById("buttons").getElementsByTagName("span");
     var prev=document.getElementById("prev");
     var next=document.getElementById("next");
     var index=1;
-    var listLen=3;
+
+
+
+
+
     function showButton(){
         for(var i=0;i<buttons.length;i++){
             if(buttons[i].className=="on"){
                 buttons[i].className="";
+
             }
-            buttons[index-1].className="on";
         }
+
+        buttons[index-1].className="on";
     }
-    function listChange(offset){
+    function listChange(offset) {
+/!*        if(offset==0){
+            return;
+        }*!/
+
         var newLeft=list.offsetLeft+offset;
         list.style.left=newLeft+"px";
         if(newLeft>-1140){
-            list.style.left=-1140*listLen+"px";
+            list.style.left=-3420+"px";
         }
-        if(newLeft<-1140*listLen){
+        if(newLeft<3420){
             list.style.left=-1140+"px";
         }
+
+
     }
+
     prev.onclick=function(){
+/!*
+        if (animated) {
+            return;
+        }
+*!/
+
         if(index==1){
             index=3;
         }else{index-=1;}
@@ -82,6 +55,10 @@ window.onload=function(){
         showButton();
     };
     next.onclick=function(){
+/!*        if (animated) {
+            return;
+        }*!/
+
         if(index==3){
             index=1;
         }else{
@@ -91,21 +68,91 @@ window.onload=function(){
         showButton();
     };
     for(var i=0;i<buttons.length;i++){
-/*        if(buttons[i].className=="on"){
-            return;
-        }*/
         buttons[i].onclick=function(){
-            var myIndex=parseInt(this.getAttribute("index"));
+/!*!/!*            if (animated) {
+                return;
+            }*!/
+            if(this.className=="on"){
+                return;
+            }*!/
+            var myIndex=this.getAttribute("index");
             var offset=-1140*(myIndex-index);
             listChange(offset);
             index=myIndex;
             showButton();
         }
     }
+
     function play(){
-       var timer=setTimeout(function(){
+        timer=setTimeout(function(){
             next.onclick();play();
-        },3000);
+        },5000);
     }
+    function stop() {
+        clearTimeout(timer);
+    }
+    container.onmouseover = stop;
+    container.onmouseout = play;
     play();
+
+
 };
+*/
+
+$(function(){
+    var btnPage=$(" #buttons a ");
+    var aImg=$(" #list img ");
+    var aSize=aImg.length;
+    var index=0;
+    $("#prev").click(function(){
+        index--;
+        if(index<0){
+            index=aSize-1;
+        }
+        change(index);
+    });
+    $("#next").click(function(){
+        index++;
+        if(index>aSize-1){
+            index=0;
+        }
+        change(index);
+    });
+    btnPage.click(function(){
+        index=$(this).index();
+        change(index);
+    });
+    function change(index){
+        btnPage.removeClass("on");
+        btnPage.eq(index).addClass("on");
+        aImg.stop();
+        aImg.eq(index).siblings().animate({opacity:0},1000);
+        aImg.eq(index).animate({opacity:1},1000);
+
+    }
+    function autoShow(){
+        index=index+1;
+        if(index<=aSize-1){
+            change(index);
+        }else{
+            index=0;
+            change(index);
+        }
+    }
+    int=setInterval(autoShow,4000);
+    function clearInt(){
+        $("#prev,#next,#buttons a").mouseover(function(){
+            clearInterval(int);
+        })
+
+    }
+    function setInt(){
+        $("#prev,#next,#buttons a").mouseout(function(){
+            int=setInterval(autoShow,4000);
+        })
+    }
+    clearInt();
+    setInt();
+
+
+});

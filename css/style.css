@@ -1,16 +1,16 @@
-*{margin:0;padding:0;text-decoration: none;}
+*{margin:0;padding:0;text-decoration: none;font-family: "Microsoft YaHei UI", sans-serif;}
 .banner{
 	margin: 0 auto;
 	width: 100%;
-    font-family: "Microsoft YaHei UI", sans-serif;
+    
 }
 .header{
 	position: relative;
 	text-align: center;
 	height: 70px;
 	margin: 0 auto;
-	min-width: 600px;
-	max-width: 1140px;
+
+    width: 1140px;
 	font-size: 18px;
 	background-color: #FFFFFF;
 }
@@ -19,15 +19,28 @@
 #menu ul li{float:left;list-style:none;}
 #menu ul li a{color: #666;float: left;display: block;padding: 21px;text-align:center;}
 #menu ul li:hover a{color: #ffffff;background-color: #5094F2;font-weight:bold;}
-.active{border-bottom: 2px solid #5094F2;}
-.contain{background-color: #e6e6e6;}
-#container{min-width: 600px;  max-width: 1140px;position:relative;overflow:hidden;margin:0 auto;height:500px;}
-#list{position:absolute;width:5700px;z-index:1;}
-#list img{float:left;}
-#buttons{position:absolute;bottom:20px;left:50%;margin:0 0 0 -60px;z-index:2;}
-#buttons span{cursor:pointer;height:15px;width:15px;border-radius:50%;background:#999;margin:0 10px;float:left;border: 3px solid #ffffff;}
+.active{border-bottom: 3px solid #5094F2;}
+.contain,#content{background-color: #e6e6e6;}
+#container{/*min-width: 600px;  */
+	width: 1140px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	height: 500px;
+	
+}
+#container #list{/*min-width: 600px;  max-width: 1140px;height:500px;*/position:relative;/*overflow:hidden;*//*z-index:1;*/}
+#container #list img{/*min-width: 600px;  max-width: 1140px;height:500px;*/position:absolute;opacity:0;filter:alpha(opacity=0);}
+#buttons{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin: 0 0 0 -60px;
+	z-index: 2;
+}
+#buttons a{height:15px;width:15px;border-radius:50%;background:#999;margin:0 10px;float:left;border: 3px solid #ffffff;}
 #buttons .on{background: #5094F2;}
-.arrow{cursor:pointer;z-index:2;line-height:40px;text-align:center;font-size:36px;font-weight:bold;width:40px;height:40px;position:absolute;top:230px;background-color: RGBA(0,0,0,0.3);color: #ffffff;display:none;}
+.arrow{z-index:2;line-height:40px;text-align:center;font-size:36px;font-weight:bold;width:40px;height:40px;position:absolute;top:230px;background-color: RGBA(0,0,0,0.3);color: #ffffff;display:none;}
 #container a:hover{ RGBA(0,0,0,0.7);}
 #container:hover .arrow{display:block;}
 #prev{left:10px;}
@@ -41,3 +54,21 @@ background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#f6f6f8));/
 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#5094F2));      /!* Safari 4-5, Chrome 1-9*!/
 background: -webkit-linear-gradient(top, #fff, #5094F2);   /!*Safari5.1 Chrome 10+*!/
 background: -o-linear-gradient(top, #fff, #5094F2);  /!*Opera 11.10+*!/*/}
+#contrary{width: 100%;}
+#contrary  ul{position:relative;text-align: center;width:1140px;height:400px;margin:auto;padding:auto;}
+#contrary li{float:left;width:380px;list-style:none;height:300px;padding-top:70px;}
+#contrary li a{width:100px;height:100px;display:block;border:2px solid #588fff;border-radius:50%;margin:20px auto;background:#FFF;transition:background 1s;-moz-transition:background 1s, -moz-transform 1s; /* Firefox 4 */
+-webkit-transition:background 1s, -webkit-transform 1s; /* Safari and Chrome */
+-o-transition:background 1s, -o-transform 1s; /* Opera */}
+#contrary li a:hover{background: #588fff;}
+#contrary li a img{margin-top:27px;}
+#contrary li h3{margin:20px;color:#588fff;}
+#contrary li p{margin:auto 30px;color:#999;}
+
+#content{min-width:1140px;margin:0 auto;}
+#content .content-frame{width:1140px;margin:0 auto;padding-top:50px;position:relative;height:250px;text-align:center;}
+#content  .content-frame .qrcode{position:absolute;width:200px;height:200px;float:left;left:100px;box-shadow:10px 10px 5px #666666;}
+#content  .content-frame p{position:absolute;float:right;width:700px;right:70px;bottom:100px;background-color:#FFF;box-shadow:5px 5px 5px #666666;padding:10px;}
+
+#footer{min-width:1140px;background-color:#333;}
+.footer{background-color:#333;color:#999;text-align:center;height:100px;line-height:100px;width:1140px;margin:0 auto;}

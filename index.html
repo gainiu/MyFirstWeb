@@ -5,7 +5,7 @@
     <title>HOME</title>
     <script src="js/jquery-3.1.0.min.js"></script>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-	<script src="js/myfirst.js"></script>
+	<script src="js/myFirst.js"></script>
 </head>
 <body>
 <div class="banner">
@@ -24,26 +24,51 @@
     </div>
 	<div class="contain">
     <div id="container">
+		<a href="javascript:void(0);" class="arrow" id="prev">&lt;</a>
+		<a href="javascript:void(0);" class="arrow" id="next">&gt;</a>
 		<div id="list">
-        <img src="images/img3.jpg" alt="" />
-        <img src="images/img1.jpg" alt="" />
-        <img src="images/img2.jpg" alt="" />
-        <img src="images/img3.jpg" alt="" />
-        <img src="images/img1.jpg" alt="" />
+        <img style="opacity:1;filter:alpha(opacity=100);" src="images/img1.jpg"  />
+        <img src="images/img2.jpg"  />
+        <img src="images/img3.jpg"  />
     	</div>
     	<div id="buttons">
-        <span index="1" class="on"></span>
-        <span index="2"></span>
-        <span index="3"></span>
+        <a  href="javascript:void(0);" class="on"></a>
+        <a  href="javascript:void(0);"></a>
+        <a  href="javascript:void(0);"></a>
     	</div>
-    	<a href="javascript:;" class="arrow" id="prev">&lt;</a>
-    	<a href="javascript:;" class="arrow" id="next">&gt;</a>
 		<div class="contain_btn"><a href="#">Know More About.</a> </div>
 	</div>
 	</div>
 </div>
-<div class="contrary"></div>
-<div class="content"></div>
-<div class="footer"></div>
+<div id="contrary">
+
+	<ul >
+		<li>
+			<a href="#" ><img src="images/icon1.png" /></a>
+			<h3>Custom Design</h3>
+			<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>
+		</li>
+		<li>
+			<a href="#"><img src="images/icon2.png" /></a>
+			<h3>Web Design</h3>
+			<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>
+		</li>
+		<li>
+			<a href="#" ><img src="images/icon3.png" /></a>
+			<h3>Blog Page</h3>
+			<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>
+		</li>
+	</ul>
+	
+</div>
+<div id="content">
+
+<div class="content-frame">
+	<div style="background:url(images/qrcode.jpg) center" class="qrcode"></div>
+	<p class="ourTeam">Our Team<br/>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been the printing and typesetting industry's standard dummy text ever since the 500,s when an unknown printer took a gellery of type.
+		</p>
+		</div>
+</div>
+<div id="footer"><div class="footer">Copyright © 2016.Company name All rights reserved.</div></div>
 </body>
 </html>
