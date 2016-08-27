@@ -67,8 +67,8 @@ background: -o-linear-gradient(top, #fff, #5094F2);  /!*Opera 11.10+*!/*/}
 
 #content{min-width:1140px;margin:0 auto;}
 #content .content-frame{width:1140px;margin:0 auto;padding-top:50px;position:relative;height:250px;text-align:center;}
-#content  .content-frame .qrcode{position:absolute;width:200px;height:200px;float:left;left:100px;box-shadow:10px 10px 5px #666666;}
-#content  .content-frame p{position:absolute;float:right;width:700px;right:70px;bottom:100px;background-color:#FFF;box-shadow:5px 5px 5px #666666;padding:10px;}
+#content  .content-frame .qrcode{position:absolute;width:200px;height:200px;float:left;left:100px;box-shadow:10px 10px 5px #666666;-moz-box-shadow:10px 10px 5px #666666;-webkit-box-shadow:10px 10px 5px #666666;}
+#content  .content-frame p{position:absolute;float:right;width:700px;right:70px;bottom:100px;background-color:#FFF;box-shadow:0px 0px 10px #666666;-moz-box-shadow:0px 0px 10px #666666;-webkit-box-shadow:0px 0px 10px #666666;padding:10px;}
 
 #footer{min-width:1140px;background-color:#333;}
 .footer{background-color:#333;color:#999;text-align:center;height:100px;line-height:100px;width:1140px;margin:0 auto;}
