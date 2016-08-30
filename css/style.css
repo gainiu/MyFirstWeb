@@ -19,7 +19,7 @@
 #menu ul li{float:left;list-style:none;}
 #menu ul li a{color: #666;float: left;display: block;padding: 21px;text-align:center;}
 #menu ul li:hover a{color: #ffffff;background-color: #5094F2;font-weight:bold;}
-.active{border-bottom: 3px solid #5094F2;}
+.active{border-bottom: 4px solid #5094F2;}
 .contain,#content{background-color: #e6e6e6;}
 #container{/*min-width: 600px;  */
 	width: 1140px;
@@ -72,3 +72,6 @@ background: -o-linear-gradient(top, #fff, #5094F2);  /!*Opera 11.10+*!/*/}
 
 #footer{min-width:1140px;background-color:#333;}
 .footer{background-color:#333;color:#999;text-align:center;height:100px;line-height:100px;width:1140px;margin:0 auto;}
+
+.banner .header-bot{background-color: #588fff;height: 65px; min-width: 1140px;}
+.banner .header-bot p{width: 1140px;margin: 0 auto;line-height:70px;color:#FFF;font-size:26px;font-weight:bold;padding-left:10px;}
