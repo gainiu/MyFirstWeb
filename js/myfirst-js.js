@@ -1,6 +1,7 @@
 window.onload=function(){
     PBL('wrap','box');
     //模拟数据
+/*
     var data=[
         {"src":"1.jpg"},
         {"src":"2.jpg"},
@@ -13,6 +14,7 @@ window.onload=function(){
         {"src":"9.jpg"},
         {"src":"10.jpg"}
     ];
+*/
 
 /*    window.onscroll=function(){
         if(getCheck()){
@@ -47,6 +49,10 @@ window.onload=function(){
             PBL('wrap','box');
         }
     }*/
+    var wrapHeight=document.getElementById("wrap").scrollHeight;
+    var footer=document.getElementById("footer");
+    footer.style.marginTop=wrapHeight+"px";
+
 };
 function PBL(wrap,box){
     //	1.获得外层以及每一个box
@@ -54,8 +60,8 @@ function PBL(wrap,box){
     var boxs  = getClass(wrap,box);
     //	2.获得屏幕可显示的列数
     var boxW = boxs[0].offsetWidth;
-    var colsNum = Math.floor(document.documentElement.clientWidth/boxW);
-    wrap.style.width = boxW*colsNum+'px';//为外层赋值宽度
+    var colsNum = Math.floor(1140/boxW);
+     /*wrap.style.width = boxW*colsNum+'px';//为外层赋值宽度*/
     //	3.循环出所有的box并按照瀑布流排列
     var everyH = [];//定义一个数组存储每一列的高度
     for (var i = 0; i < boxs.length; i++) {

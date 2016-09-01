@@ -60,7 +60,7 @@ background: -o-linear-gradient(top, #fff, #5094F2);  /!*Opera 11.10+*!/*/}
 #contrary li a{width:100px;height:100px;display:block;border:2px solid #588fff;border-radius:50%;margin:20px auto;background:#FFF;transition:background 1s;-moz-transition:background 1s, -moz-transform 1s; /* Firefox 4 */
 -webkit-transition:background 1s, -webkit-transform 1s; /* Safari and Chrome */
 -o-transition:background 1s, -o-transform 1s; /* Opera */}
-#contrary li a:hover{background: #588fff;}
+#contrary li a:hover,#services .services-box .ser-box .ser-btn:hover{background: #588fff;cursor:pointer;}
 #contrary li a img{margin-top:27px;}
 #contrary li h3{margin:20px;color:#588fff;}
 #contrary li p{margin:auto 30px;color:#999;}
@@ -70,14 +70,40 @@ background: -o-linear-gradient(top, #fff, #5094F2);  /!*Opera 11.10+*!/*/}
 #content  .content-frame .qrcode{position:absolute;width:200px;height:200px;float:left;left:100px;box-shadow:10px 10px 5px #666666;-moz-box-shadow:10px 10px 5px #666666;-webkit-box-shadow:10px 10px 5px #666666;}
 #content  .content-frame p{position:absolute;float:right;width:700px;right:70px;bottom:100px;background-color:#FFF;box-shadow:0px 0px 10px #666666;-moz-box-shadow:0px 0px 10px #666666;-webkit-box-shadow:0px 0px 10px #666666;padding:10px;}
 
-#footer{min-width:1140px;background-color:#333;/*overflow:hidden;width:100%;*/}
+#footer{min-width:1140px;background-color:#333;}
 .footer{background-color:#333;color:#999;text-align:center;height:100px;line-height:100px;width:1140px;margin:0 auto;}
 
-.banner .header-bot{background-color: #588fff;height: 65px; min-width: 1140px;}
+.banner .header-bot{background-color: #588fff;height: 65px; min-width: 1140px;margin-bottom:50px;}
 .banner .header-bot p{width: 1140px;margin: 0 auto;line-height:70px;color:#FFF;font-size:26px;font-weight:bold;padding-left:10px;}
 /*-----------products-------------*/
-#wrap{margin:0 auto;position:relative;/*display:block;*/width:1140px;}
+#wrap{margin:0 auto;position:relative;width:1140px;padding-bottom:200px ;height:100%;}
 #wrap .box{float:left;width:265px;height:auto;padding:10px;}
 #wrap .box .info{width:265px;height:auto;border-radius:8px;box-shadow:0 0 10px #000;border:1px solid #588fff;}
 #wrap .box .info .pic{width:245px;height:auto;margin:0 auto;padding:10px 0;}
 #wrap .box .info .pic img{width:245px;border-radius:3px;}
+/*-----------services-------------*/
+#services{margin:0 auto;width:1140px;height:800px;}
+#services .services-box{float:left;width:800px;}
+#services .services-box .ser-box{border-bottom:1px solid #999;overflow:hidden;width:800px;padding:50px 0;}
+#services .services-box .ser-box .ser-pic{width:180px;float:left;margin:0 20px;}
+#services .services-box .ser-box .ser-pic img{width:180px;}
+#services .services-box .ser-box .ser-text{width:300px;float:left;margin:0 20px;}
+#services .services-box .ser-box .ser-btn{width: 150px;height: 45px;float: left;text-align: center;line-height: 45px;margin-top: 50px;font-size: 20px;background-color: #E44141;color:#FFF;border-radius:5px;transition:background 1s;}
+#services a{color:#333;}#services a:hover{color:#588fff;}
+#services p{color:#666;}
+#services .read-about{float:left;width:340px;height:100%;}
+#services .read-about .related{width:340px;margin:40px auto;}
+#services .read-about .related .related-pic{width:280px;margin:auto;}
+#services .read-about .related img{width:280px;}
+#services .read-about .related-text{padding-left: 30px;}
+#services .read-about .related-text h3 a{color:#588fff;}
+#services .read-about p{text-align:center;}
+/*-----------contact-------------*/
+#contact{width:1140px;margin:0 auto 100px;;}
+#contact .con-pic img{width:1140px;height:400px;}
+#contact .con-text h2{margin:30px 0;color:#588fff;font-size:28px;;}
+#contact .con-text p{margin: 20px 0;color: #666;}
+#contact .form input,#contact .form-message textarea{width:1138px;height:40px;margin:15px 0;border:1px solid #588fff;color: #666;font-size:16px;}
+#contact .form-message textarea{height:150px;}
+#contact .submit input{width:200px;height:45px;background-color:#588fff;border:none;color:#FFF;font-size:18px;margin:10px 0;}
+#contact .submit input:hover{cursor:pointer;background-color:#E44141;}
